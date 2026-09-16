@@ -97,7 +97,7 @@ function labRequirements() {
 
 const README = `# EgyKode lab environment
 
-The machines the [EgyKode](https://egykode.com) labs run on: a controller you
+The machines the [EgyKode Academy](https://academy.egykode.com) labs run on: a controller you
 work from, and a managed node for it to configure.
 
 \`\`\`bash
@@ -130,7 +130,7 @@ reset\` deletes it, and asks first.
 
 ## This repository is generated
 
-The sources live in [the main EgyKode repository](https://github.com/Waleeddarwesh/EgyKode)
+The sources live in [the main EgyKode Academy repository](https://github.com/EgyKode/EgyKode-Academy)
 under \`docker/\`, \`clusters/\` and the \`egykode\` script. Edit them there;
 \`scripts/sync-lab-env.mjs\` regenerates this mirror, and CI fails when the two
 drift. Changes made directly here are lost on the next sync.

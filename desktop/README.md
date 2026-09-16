@@ -85,7 +85,7 @@ stating precisely, because guessing it wrong costs a Store review. Unpacking the
 generated MSIX settles it: the package contains **only tile images and
 `AppxManifest.xml`** — no web content and no copy of the web manifest. It
 declares a `HostRuntimeDependency` on `Microsoft.MicrosoftEdge.Stable` and
-launches Edge at `https://egykode.com/`. Its Edge extension entry names exactly
+launches Edge at `https://academy.egykode.com/`. Its Edge extension entry names exactly
 which manifest members it takes a copy of:
 
     handlers?protocol_handlers,app_uri_handler

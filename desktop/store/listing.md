@@ -64,7 +64,7 @@ machine.
 > • Read offline — pages you open are kept, and you can save a phase before you
 >   travel
 > • Opens like an app, with the curriculum and labs a keystroke away
-> • Same content as egykode.com, always — corrections reach you without an update
+> • Same content as academy.egykode.com, always — corrections reach you without an update
 >
 > **Free, and open source.** No account required to read. No advertising. No
 > paid tier.
@@ -111,9 +111,9 @@ hand-edit, so they cannot drift from the site's own icons.
 
 | Field | Value |
 | --- | --- |
-| Website | `https://egykode.com` |
-| Privacy policy | `https://egykode.com/privacy/` |
-| Support contact | `https://github.com/Waleeddarwesh/EgyKode/issues` |
+| Website | `https://academy.egykode.com` |
+| Privacy policy | `https://academy.egykode.com/privacy/` |
+| Support contact | `https://github.com/EgyKode/EgyKode-Academy/issues` |
 
 Partner Center requires a working privacy policy URL, and a submission with a
 404 there is rejected — the most common reason a first submission fails. The

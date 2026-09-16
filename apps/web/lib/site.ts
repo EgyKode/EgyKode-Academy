@@ -1,6 +1,6 @@
 /** Project-wide constants that appear in more than one place. */
 export const SITE = {
-  repo: process.env.NEXT_PUBLIC_REPO_URL ?? "https://github.com/Waleeddarwesh/EgyKode",
+  repo: process.env.NEXT_PUBLIC_REPO_URL ?? "https://github.com/EgyKode/EgyKode-Academy",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://egykode.com",
 } as const;
 

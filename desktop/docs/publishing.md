@@ -40,7 +40,7 @@ npm run desktop:parity     # one content source, all routes resolving
 ```
 
 **4. Generate the package.** Go to [pwabuilder.com](https://www.pwabuilder.com),
-enter `https://egykode.com`, and package for Windows. Supply the identity values
+enter `https://academy.egykode.com`, and package for Windows. Supply the identity values
 from step 2. PWABuilder produces:
 
 - `.msixbundle` — upload this
@@ -59,7 +59,7 @@ check, in order:
 - The icon is not clipped in the Start menu
 
 **6. Submit.** Upload the bundle, paste the listing from `store/listing.md`, add
-the screenshots, and set the privacy URL to `https://egykode.com/privacy/`.
+the screenshots, and set the privacy URL to `https://academy.egykode.com/privacy/`.
 
 Certification usually takes a few hours to a few days.
 

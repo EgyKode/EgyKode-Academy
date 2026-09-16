@@ -9,9 +9,9 @@
 Learn the concepts, build the infrastructure, practise in hands-on labs, and
 finish with projects you can actually deploy.
 
-**[EgyKode Academy](https://egykode.com)** · [Roadmaps](https://egykode.com/en/roadmaps/) · [Learn](https://egykode.com/en/learn/) · [Courses](https://egykode.com/en/courses/) · [Topics](https://egykode.com/en/topics/) · [Labs](https://egykode.com/en/labs/) · [Interview](https://egykode.com/en/prepare/questions/)
+**[EgyKode Academy](https://academy.egykode.com)** · [Roadmaps](https://academy.egykode.com/en/roadmaps/) · [Learn](https://academy.egykode.com/en/learn/) · [Courses](https://academy.egykode.com/en/courses/) · [Topics](https://academy.egykode.com/en/topics/) · [Labs](https://academy.egykode.com/en/labs/) · [Interview](https://academy.egykode.com/en/prepare/questions/)
 
-[![Live](https://img.shields.io/badge/live-egykode.com-1fe881?style=flat-square)](https://egykode.com)
+[![Live](https://img.shields.io/badge/live-academy.egykode.com-1fe881?style=flat-square)](https://academy.egykode.com)
 [![Licence: MIT](https://img.shields.io/badge/code-MIT-1fe881?style=flat-square)](LICENSE)
 [![Content: CC BY-SA 4.0](https://img.shields.io/badge/content-CC%20BY--SA%204.0-1fe881?style=flat-square)](LICENSE-CONTENT)
 ![Next.js 15](https://img.shields.io/badge/Next.js-15-black?style=flat-square)
@@ -22,7 +22,9 @@ finish with projects you can actually deploy.
 
 ---
 
-EgyKode Academy is an open-source learning platform for **Cloud, DevOps, Kubernetes,
+EgyKode Academy is the open-source learning product of [EgyKode](https://egykode.com),
+an IT and technology company with products, engineering services, and consulting.
+It is a learning platform for **Cloud, DevOps, Kubernetes,
 Infrastructure as Code, CI/CD, GitOps, Observability, Security and SRE**.
 
 The goal is simple:
@@ -145,7 +147,7 @@ on your host machine.
 ### Quick start (lab environment)
 
 ```bash
-git clone https://github.com/Waleeddarwesh/EgyKode-lab.git
+git clone https://github.com/EgyKode/EgyKode-lab.git
 cd EgyKode-lab
 ./egykode start          # pulls the images, starts controller + node
 ./egykode shell          # drops you into the controller
@@ -161,7 +163,7 @@ Optional profiles:
 ```
 
 > The lab environment lives in its own repository
-> ([EgyKode-lab](https://github.com/Waleeddarwesh/EgyKode-lab)) so learners
+> ([EgyKode-lab](https://github.com/EgyKode/EgyKode-lab)) so learners
 > clone only the ~97 KB they need, not the 6+ MB website source. The two stay
 > in sync via `npm run lint:lab-env` in CI.
 
@@ -181,7 +183,7 @@ Being honest about what is finished matters more than a long feature list.
 
 | Area | Status |
 |---|---|
-| **EgyKode Academy live at [egykode.com](https://egykode.com)** | ✅ AWS S3 + CloudFront, deployed from `master` |
+| **EgyKode Academy target: [academy.egykode.com](https://academy.egykode.com)** | ⏳ Pending DNS and CloudFront cutover (currently served from the apex) |
 | Chapters, topics, roadmaps, labs, projects | ✅ Available |
 | Local lab environment | ✅ Docker images on [Docker Hub](https://hub.docker.com/r/waleeddarwesh/egykode) |
 | Killercoda browser-based labs | ✅ 45 scenarios |

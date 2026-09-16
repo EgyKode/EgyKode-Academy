@@ -87,7 +87,7 @@ export default function PrivacyPage() {
         <h2>Contact</h2>
         <p>
           Questions about this policy can be raised as an issue on the{" "}
-          <Link href="https://github.com/Waleeddarwesh/EgyKode">project repository</Link>.
+          <Link href="https://github.com/EgyKode/EgyKode-Academy">project repository</Link>.
         </p>
       </div>
     </main>

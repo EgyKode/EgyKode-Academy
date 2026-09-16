@@ -49,7 +49,7 @@ export function organization() {
     // as a probable typo until enough independent references agree it exists —
     // "egykode" was being auto-corrected to a long-established site — and
     // `sameAs` is the one place markup can assert those references directly.
-    sameAs: [SITE.repo, "https://github.com/Waleeddarwesh", "https://www.linkedin.com/in/waleeddarwesh1"].filter(
+    sameAs: [SITE.repo, "https://github.com/EgyKode", "https://www.linkedin.com/in/waleeddarwesh1"].filter(
       Boolean,
     ),
   };

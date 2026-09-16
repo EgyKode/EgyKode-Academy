@@ -12,7 +12,7 @@ content/  ── 57 chapters · 114 labs · roadmaps · projects · courses
     ▼
 apps/web  ── Next.js static export + manifest + service worker
     │
-    ├──────────────► egykode.com                 browser, any platform
+    ├──────────────► academy.egykode.com         browser, any platform
     └──────────────► MSIX via PWABuilder         Microsoft Store, Windows
 ```
 

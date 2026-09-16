@@ -2,7 +2,7 @@
 
 ## Offline is a cache, never a second source
 
-Everything readable offline was fetched from egykode.com and kept. Nothing is
+Everything readable offline was fetched from academy.egykode.com and kept. Nothing is
 bundled into the package, and nothing is authored for offline use. When the
 network returns, pages are refetched and the cache is replaced.
 

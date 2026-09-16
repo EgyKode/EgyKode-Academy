@@ -57,7 +57,7 @@ const titles = scenarios.map((n) => {
 
 const README = `# EgyKode Killercoda scenarios
 
-Hands-on scenarios for [EgyKode](https://egykode.com), free and in the browser
+Hands-on scenarios for [EgyKode Academy](https://academy.egykode.com), free and in the browser
 with nothing to install.
 
 | Directory | Scenario | Backend |
@@ -77,7 +77,7 @@ ambiguity.
 
 ## This repository is generated
 
-The sources live in [the main EgyKode repository](https://github.com/Waleeddarwesh/EgyKode)
+The sources live in [the main EgyKode Academy repository](https://github.com/EgyKode/EgyKode-Academy)
 under \`killercoda/\`. Edit them there; \`scripts/sync-scenarios.mjs\`
 regenerates this mirror and CI fails when the two drift. Changes made directly
 here are lost on the next sync.
