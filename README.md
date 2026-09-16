@@ -1,15 +1,15 @@
 <div align="center">
 
-<img src=".github/assets/logo.svg" alt="EgyKode" width="96" height="106">
+<img src=".github/assets/logo.svg" alt="EgyKode Academy" width="96" height="106">
 
-# EgyKode
+# EgyKode Academy
 
 **The open-source Cloud &amp; DevOps learning platform.**
 
 Learn the concepts, build the infrastructure, practise in hands-on labs, and
 finish with projects you can actually deploy.
 
-**[egykode.com](https://egykode.com)** · [Roadmaps](https://egykode.com/en/roadmaps/) · [Learn](https://egykode.com/en/learn/) · [Courses](https://egykode.com/en/courses/) · [Topics](https://egykode.com/en/topics/) · [Labs](https://egykode.com/en/labs/) · [Interview](https://egykode.com/en/prepare/questions/)
+**[EgyKode Academy](https://egykode.com)** · [Roadmaps](https://egykode.com/en/roadmaps/) · [Learn](https://egykode.com/en/learn/) · [Courses](https://egykode.com/en/courses/) · [Topics](https://egykode.com/en/topics/) · [Labs](https://egykode.com/en/labs/) · [Interview](https://egykode.com/en/prepare/questions/)
 
 [![Live](https://img.shields.io/badge/live-egykode.com-1fe881?style=flat-square)](https://egykode.com)
 [![Licence: MIT](https://img.shields.io/badge/code-MIT-1fe881?style=flat-square)](LICENSE)
@@ -22,14 +22,14 @@ finish with projects you can actually deploy.
 
 ---
 
-EgyKode is an open-source learning platform for **Cloud, DevOps, Kubernetes,
+EgyKode Academy is an open-source learning platform for **Cloud, DevOps, Kubernetes,
 Infrastructure as Code, CI/CD, GitOps, Observability, Security and SRE**.
 
 The goal is simple:
 
 **Learn → Practise → Build → Deploy**
 
-Instead of collecting disconnected tutorials, EgyKode connects structured
+Instead of collecting disconnected tutorials, EgyKode Academy connects structured
 chapters to ordered roadmaps, hands-on labs and deployable projects — and every
 roadmap ends with something you can run, not a reading list.
 
@@ -52,13 +52,13 @@ These numbers are counted from the corpus, not aspirational:
 > it or a lab practises it. A topic page can never promise material that is not
 > there, and the count grows on its own as content is added.
 
-## ✨ Why EgyKode?
+## ✨ Why EgyKode Academy?
 
 Cloud and DevOps learning often becomes a list of tools:
 
 > Linux → Docker → Kubernetes → Terraform → AWS → Jenkins → …
 
-EgyKode organises those tools around **engineering concepts and outcomes**. For
+EgyKode Academy organises those tools around **engineering concepts and outcomes**. For
 each one you should understand why it exists, what problem it solves, how it
 fits into a larger system, how to operate it, how to secure it — and how to
 build something with it.
@@ -131,7 +131,7 @@ and validated by `npm run lint:killercoda`.
 
 ## 🖥️ Local lab environment
 
-For labs that don't require cloud resources, EgyKode provides a fully
+For labs that don't require cloud resources, EgyKode Academy provides a fully
 containerised local lab environment. Two Docker images — published to
 [`waleeddarwesh/egykode`](https://hub.docker.com/r/waleeddarwesh/egykode) on
 Docker Hub — give you a complete DevOps workstation without installing anything
@@ -168,7 +168,7 @@ Optional profiles:
 ## 🚀 Projects
 
 Projects are where the curriculum comes together. They can be built by the
-EgyKode team, contributed by the community, or imported from public GitHub
+EgyKode Academy team, contributed by the community, or imported from public GitHub
 repositories with attribution and licence intact:
 
 ```bash
@@ -181,7 +181,7 @@ Being honest about what is finished matters more than a long feature list.
 
 | Area | Status |
 |---|---|
-| **Live at [egykode.com](https://egykode.com)** | ✅ AWS S3 + CloudFront, deployed from `master` |
+| **EgyKode Academy live at [egykode.com](https://egykode.com)** | ✅ AWS S3 + CloudFront, deployed from `master` |
 | Chapters, topics, roadmaps, labs, projects | ✅ Available |
 | Local lab environment | ✅ Docker images on [Docker Hub](https://hub.docker.com/r/waleeddarwesh/egykode) |
 | Killercoda browser-based labs | ✅ 45 scenarios |
@@ -203,8 +203,8 @@ follow.
 ## 🏁 Quick start
 
 ```bash
-git clone https://github.com/Waleeddarwesh/EgyKode.git
-cd EgyKode
+git clone https://github.com/EgyKode/EgyKode-Academy.git
+cd EgyKode-Academy
 npm install
 npm run dev            # http://localhost:3000
 ```
