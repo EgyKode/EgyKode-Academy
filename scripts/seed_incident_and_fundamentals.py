@@ -1054,7 +1054,7 @@ Two behaviours worth remembering:
         ],
         "reproduce": """```bash
 kubectl create namespace incident-01
-kubectl apply -n incident-01 -f https://raw.githubusercontent.com/Waleeddarwesh/EgyKode/master/content/labs/fixtures/incident-01.yaml
+kubectl apply -n incident-01 -f https://raw.githubusercontent.com/EgyKode/EgyKode-Academy/master/content/labs/fixtures/incident-01.yaml
 ```
 
 If the fixture is unavailable, reproduce it by hand: deploy any HTTP image
@@ -1206,7 +1206,7 @@ in order rather than reading the list and guessing.
         ],
         "reproduce": """```bash
 kubectl create namespace incident-02
-kubectl apply -n incident-02 -f https://raw.githubusercontent.com/Waleeddarwesh/EgyKode/master/content/labs/fixtures/incident-02.yaml
+kubectl apply -n incident-02 -f https://raw.githubusercontent.com/EgyKode/EgyKode-Academy/master/content/labs/fixtures/incident-02.yaml
 ```
 
 By hand: deploy any image whose entrypoint reads a required environment
@@ -1337,7 +1337,7 @@ The second half matters as much as the first.
         ],
         "reproduce": """```bash
 kubectl create namespace incident-03
-kubectl apply -n incident-03 -f https://raw.githubusercontent.com/Waleeddarwesh/EgyKode/master/content/labs/fixtures/incident-03.yaml
+kubectl apply -n incident-03 -f https://raw.githubusercontent.com/EgyKode/EgyKode-Academy/master/content/labs/fixtures/incident-03.yaml
 ```
 
 By hand: deploy two services in one namespace, then apply a default-deny egress

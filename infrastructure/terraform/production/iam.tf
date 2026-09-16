@@ -45,10 +45,10 @@ data "aws_iam_policy_document" "assume_from_github" {
     # GitHub sends the subject in its **immutable identifier** form, which
     # CloudTrail showed after two exact-match attempts failed:
     #
-    #   repo:Waleeddarwesh@138933390/EgyKode@1328730125:ref:refs/heads/master
+    #   repo:EgyKode@329956614/EgyKode@1328730125:ref:refs/heads/master
     #
     # Owner and repository carry their numeric ids, so no pattern written
-    # against `Waleeddarwesh/EgyKode` can ever match. The ids are permanent —
+    # against `EgyKode/EgyKode-Academy` can ever match. The ids are permanent —
     # that is the point of the feature: renaming the repo or the account does
     # not silently grant or revoke access, whereas a name-based policy would
     # follow whoever takes the old name.

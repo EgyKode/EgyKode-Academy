@@ -6,7 +6,7 @@
 > `MUST`, `SHOULD`, `MAY` carry their RFC 2119 meanings.
 
 **Version** 1.0 · **Owner** Waleed Darwesh · **Status** Draft for build
-**Repository** `Waleeddarwesh/EgyKode` · **License** MIT (code) / CC BY-SA 4.0 (content)
+**Repository** `EgyKode/EgyKode-Academy` · **License** MIT (code) / CC BY-SA 4.0 (content)
 
 > **The promise:** Every roadmap ends with a deployable production project.
 > **الوعد:** كل مسار ينتهي بمشروع production حقيقي قابل للنشر.

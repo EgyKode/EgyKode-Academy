@@ -44,7 +44,7 @@ variable "attach_domain" {
 variable "github_repository" {
   description = "owner/repo permitted to assume the deploy role"
   type        = string
-  default     = "Waleeddarwesh/EgyKode"
+  default     = "EgyKode/EgyKode-Academy"
 }
 
 variable "github_owner_id" {
@@ -56,7 +56,7 @@ variable "github_owner_id" {
     exact value from a failed AssumeRoleWithWebIdentity event in CloudTrail.
   EOT
   type        = string
-  default     = "Waleeddarwesh@138933390"
+  default     = "EgyKode@329956614"
 }
 
 variable "github_repo_id" {
