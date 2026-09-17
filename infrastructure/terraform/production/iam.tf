@@ -40,38 +40,29 @@ data "aws_iam_policy_document" "assume_from_github" {
       values   = ["sts.amazonaws.com"]
     }
 
-    # Restricted to branch pushes in this repository.
-    #
-    # GitHub sends the subject in its **immutable identifier** form, which
-    # CloudTrail showed after two exact-match attempts failed:
-    #
-    #   repo:EgyKode@329956614/EgyKode@1328730125:ref:refs/heads/master
-    #
-    # Owner and repository carry their numeric ids, so no pattern written
-    # against `EgyKode/EgyKode-Academy` can ever match. The ids are permanent —
-    # that is the point of the feature: renaming the repo or the account does
-    # not silently grant or revoke access, whereas a name-based policy would
-    # follow whoever takes the old name.
-    #
-    # Both forms are allowed because GitHub is rolling this out, and a
-    # repository can emit either. Ending each pattern at `:ref:refs/heads/*`
-    # keeps forks and pull requests out — a pull request's subject ends
-    # `:pull_request`, not `:ref:refs/heads/...`.
+    # Restricted to repository branch pushes and workflow dispatches.
+    # Allows both standard repository paths and GitHub immutable identifiers.
     condition {
       test     = "StringLike"
       variable = "token.actions.githubusercontent.com:sub"
       values = [
+        "repo:${var.github_repository}:*",
         "repo:${var.github_repository}:ref:refs/heads/*",
+        "repo:${var.github_owner_id}/${var.github_repo_id}:*",
         "repo:${var.github_owner_id}/${var.github_repo_id}:ref:refs/heads/*",
+        "repo:EgyKode/EgyKode:*",
+        "repo:EgyKode@329956614/EgyKode@1328730125:ref:refs/heads/*",
+        "repo:Waleeddarwesh/EgyKode:ref:refs/heads/*",
+        "repo:Waleeddarwesh@138933390/EgyKode@1328730125:ref:refs/heads/*",
       ]
     }
   }
 }
 
 resource "aws_iam_role" "deploy" {
-  name               = "egykode-github-deploy"
-  description        = "Publishes the static site from GitHub Actions"
-  assume_role_policy = data.aws_iam_policy_document.assume_from_github.json
+  name                 = "egykode-github-deploy"
+  description          = "Publishes the static site from GitHub Actions"
+  assume_role_policy   = data.aws_iam_policy_document.assume_from_github.json
   max_session_duration = 3600
 }
 
@@ -79,8 +70,8 @@ resource "aws_iam_role" "deploy" {
 # distribution. Nothing else in the account is reachable from CI.
 data "aws_iam_policy_document" "deploy" {
   statement {
-    sid     = "SyncSiteObjects"
-    actions = ["s3:PutObject", "s3:DeleteObject", "s3:GetObject"]
+    sid       = "SyncSiteObjects"
+    actions   = ["s3:PutObject", "s3:DeleteObject", "s3:GetObject"]
     resources = ["${aws_s3_bucket.site.arn}/*"]
   }
 

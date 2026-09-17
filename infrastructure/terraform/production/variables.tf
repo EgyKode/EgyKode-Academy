@@ -62,7 +62,7 @@ variable "github_owner_id" {
 variable "github_repo_id" {
   description = "Repository in immutable-identifier form, \"name@numeric-id\""
   type        = string
-  default     = "EgyKode@1328730125"
+  default     = "EgyKode-Academy@1328730125"
 }
 
 variable "production_branch" {
