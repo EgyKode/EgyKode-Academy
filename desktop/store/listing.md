@@ -8,7 +8,7 @@ retype, so a transcription error cannot reach a package.
 | Field | Value |
 | --- | --- |
 | Display name | `EgyKode` |
-| Publisher display name | `Waleed Darwesh` |
+| Publisher display name | `EgyKode` |
 | Package identity name | `WaleedDarwesh.EgyKode` |
 | Publisher ID | `CN=CB531976-FCF2-441C-9F02-2E56AD3DCDDE` |
 | Package family name | `WaleedDarwesh.EgyKode_pt5t1s44vqkry` |
