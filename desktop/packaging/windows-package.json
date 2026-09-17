@@ -30,7 +30,7 @@
     "packageSid": "S-1-15-2-3815810497-3482842155-2665387680-2395708312-1702402210-2110088535-4089880431"
   },
 
-  "version": "1.0.0",
+  "version": "1.0.2",
   "$versionNote": "Store packages must increase monotonically. 1.0.0.0 is reserved by Partner Center for the first submission, so the first uploaded package is 1.0.1.0 or later.",
   "classicPackage": {
     "generate": true,
