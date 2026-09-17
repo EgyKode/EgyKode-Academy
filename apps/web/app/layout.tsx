@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://egykode.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://academy.egykode.com"),
   // No `template` here. The locale layout owns it — defining one at both
   // levels applied it twice, producing "EgyKode — … · EgyKode" on the home
   // page, which reads as a broken title in a search result.

@@ -6,7 +6,7 @@ import type { MetadataRoute } from "next";
  */
 export const dynamic = "force-static";
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://egykode.com";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://academy.egykode.com";
 
 /**
  * The AI-crawler policy is stated explicitly rather than left ambiguous

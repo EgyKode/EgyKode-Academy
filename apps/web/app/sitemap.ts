@@ -12,7 +12,7 @@ import { PUBLIC_LOCALES } from "@/lib/i18n";
  */
 export const dynamic = "force-static";
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://egykode.com";
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://academy.egykode.com";
 
 /**
  * The canonical form of a URL, which is the only form that belongs in a

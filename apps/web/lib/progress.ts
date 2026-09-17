@@ -39,6 +39,73 @@ export function writeProgress(next: Set<string>): void {
   window.dispatchEvent(new CustomEvent(PROGRESS_EVENT));
 }
 
+const MIGRATION_FLAG = "egykode_apex_migrated_v1";
+
+export function migrateApexProgress(): void {
+  if (typeof window === "undefined") return;
+  if (localStorage.getItem(MIGRATION_FLAG) || window.location.hostname === "egykode.com") {
+    return;
+  }
+
+  const iframe = document.createElement("iframe");
+  iframe.src = "https://egykode.com/bridge.html";
+  iframe.style.display = "none";
+  iframe.setAttribute("aria-hidden", "true");
+
+  const cleanup = () => {
+    window.removeEventListener("message", onMessage);
+    if (iframe.parentNode) {
+      iframe.parentNode.removeChild(iframe);
+    }
+  };
+
+  const onMessage = (event: MessageEvent) => {
+    if (event.origin !== "https://egykode.com") return;
+    try {
+      if (event.data && event.data.type === "EGYKODE_SYNC_RESPONSE" && event.data.data) {
+        const { progress, stepMarks, labCriteria, theme } = event.data.data;
+
+        if (Array.isArray(progress) && progress.length > 0) {
+          const current = readProgress();
+          progress.forEach((id: string) => current.add(id));
+          writeProgress(current);
+        }
+
+        if (stepMarks && !localStorage.getItem("egykode_step_marks")) {
+          localStorage.setItem("egykode_step_marks", JSON.stringify(stepMarks));
+        }
+
+        if (labCriteria && !localStorage.getItem("egykode_lab_criteria")) {
+          localStorage.setItem("egykode_lab_criteria", JSON.stringify(labCriteria));
+        }
+
+        if (theme && !localStorage.getItem("egykode_theme")) {
+          localStorage.setItem("egykode_theme", theme);
+        }
+
+        localStorage.setItem(MIGRATION_FLAG, "true");
+        cleanup();
+      }
+    } catch {
+      // Storage unavailable or parsing issue
+    }
+  };
+
+  window.addEventListener("message", onMessage);
+
+  iframe.onload = () => {
+    iframe.contentWindow?.postMessage({ type: "EGYKODE_SYNC_REQUEST" }, "https://egykode.com");
+  };
+
+  // 5-second fallback cleanup
+  setTimeout(() => {
+    cleanup();
+    localStorage.setItem(MIGRATION_FLAG, "true");
+  }, 5000);
+
+  document.body.appendChild(iframe);
+}
+
 /**
  * `null` until the store has been read, so a first render can show nothing
  * rather than flashing "0% complete" at someone who is mid-way through.
@@ -53,6 +120,7 @@ export function useProgress(): {
   useEffect(() => {
     const sync = () => setDone(readProgress());
     sync();
+    migrateApexProgress();
     window.addEventListener(PROGRESS_EVENT, sync);
     window.addEventListener("storage", sync); // another tab changed it
     return () => {
