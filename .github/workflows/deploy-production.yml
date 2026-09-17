@@ -223,13 +223,11 @@ jobs:
             --cache-control "public,max-age=0,must-revalidate" \
             --only-show-errors
 
-      # Only the mutable half needs invalidating. `/_next/static/*` is
-      # content-hashed, so invalidating it would be free churn — and the first
-      # 1,000 invalidation paths a month are free, which this stays inside.
+      # Invalidate CloudFront cache on academy.egykode.com distribution
       - name: Invalidate pages
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} \
+            --distribution-id ${{ secrets.AWS_ACADEMY_DISTRIBUTION_ID || 'EKGYZKUYRL87E' }} \
             --paths "/*" \
             --query 'Invalidation.Id' --output text
 
