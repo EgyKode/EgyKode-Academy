@@ -35,9 +35,10 @@ export function Mark({
 export function Wordmark({ className }: { className?: string }) {
   return (
     <span className={`inline-flex items-center gap-2.5 ${className ?? ""}`}>
-      <Mark className="h-7 w-auto text-brand" title="EgyKode" />
-      <span className="font-display text-[1.35rem] font-bold leading-none tracking-tight text-content">
-        EgyKode
+      <Mark className="h-7 w-auto text-brand" title="EgyKode Academy" />
+      <span className="font-display text-[1.35rem] font-bold leading-none tracking-tight text-content flex items-center gap-1.5">
+        <span>EgyKode</span>
+        <span className="text-brand font-medium">Academy</span>
       </span>
     </span>
   );

@@ -36,8 +36,9 @@ export function TopBar({ locale }: { locale: Locale }) {
           aria-label={t("nav.home")}
         >
           <Mark className="h-7 w-auto text-brand" />
-          <span className="font-display text-lg font-bold leading-none tracking-tight">
-            EgyKode
+          <span className="font-display text-lg font-bold leading-none tracking-tight flex items-center gap-1.5">
+            <span>EgyKode</span>
+            <span className="text-brand font-medium">Academy</span>
           </span>
         </Link>
 

@@ -37,7 +37,7 @@ if(!app)return;
 var trim=function(){
 var t=document.title;
 if(!t)return;
-var n=t.replace(/\\s*[·\\-—|]\\s*EgyKode\\s*$/,'').replace(/^\\s*EgyKode\\s*[·\\-—|]\\s*/,'');
+var n=t.replace(/\\s*[·\\-—|]\\s*EgyKode(?:\\s+Academy)?\\s*$/,'').replace(/^\\s*EgyKode(?:\\s+Academy)?\\s*[·\\-—|]\\s*/,'');
 if(n&&n!==t)document.title=n;
 };
 trim();

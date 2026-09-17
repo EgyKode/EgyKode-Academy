@@ -34,8 +34,8 @@ type EgyKodeManifest = MetadataRoute.Manifest & {
 
 export default function manifest(): EgyKodeManifest {
   return {
-    name: "EgyKode — Learn Cloud & DevOps",
-    short_name: "EgyKode",
+    name: "EgyKode Academy — Learn Cloud & DevOps",
+    short_name: "EgyKode Academy",
     description:
       "Learn Cloud and DevOps by building one real production platform. Chapters, hands-on labs, roadmaps and a capstone project — free and open source.",
 

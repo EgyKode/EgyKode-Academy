@@ -267,7 +267,7 @@
   "progress.storedLocally": "محفوظ في هذا المتصفح",
   "home.statTopics": "موضوعًا",
   "nav.interview": "المقابلات",
-  "seo.homeTitle": "EgyKode — منصة مفتوحة المصدر لتعلّم Cloud و DevOps",
+  "seo.homeTitle": "أكاديمية إيجي كود (EgyKode Academy) — منصة مفتوحة المصدر لتعلّم Cloud و DevOps",
   "seo.homeDescription": "تعلّم Cloud و DevOps مجانًا وبشكل مفتوح: فصول منظّمة، ومعامل تطبيقية بنمط التحدي، ومسارات مرتّبة، ومشاريع حقيقية تنشرها بنفسك.",
   "seo.learnDescription": "{count} فصلًا تغطي Linux والشبكات و Docker و Kubernetes و Terraform و AWS و CI/CD و GitOps وقابلية الرصد والأمان و SRE — بأوامر تنفّذها، وكيف تفشل، والمفاضلات.",
   "seo.questionsDescription": "215 سؤال مقابلة في Cloud و DevOps مع إجاباتها، مصنّفة بالمستوى ومرتبطة بالفصل الذي يشرح كلًّا منها.",

@@ -28,14 +28,14 @@ export async function generateMetadata({
   return {
     // Leads with what people search for. The tagline is brand voice and lives
     // on the page itself; a title tag has ~60 characters to earn a click.
-    title: { default: t("seo.homeTitle"), template: "%s · EgyKode" },
+    title: { default: t("seo.homeTitle"), template: "%s · EgyKode Academy" },
     description: t("seo.homeDescription"),
     alternates: {
       canonical: `/${locale}`,
       languages: languageAlternates((locale) => `/${locale}`, { xDefault: true }),
     },
     openGraph: {
-      siteName: "EgyKode",
+      siteName: "EgyKode Academy",
       locale: locale === "ar" ? "ar_EG" : "en_US",
       type: "website",
       title: t("seo.homeTitle"),
@@ -50,7 +50,7 @@ export async function generateMetadata({
           url: "/brand/mark-dark-source.png",
           width: 1408,
           height: 768,
-          alt: "EgyKode — Cloud & DevOps, free and in the open",
+          alt: "EgyKode Academy — Cloud & DevOps, free and in the open",
         },
       ],
     },
