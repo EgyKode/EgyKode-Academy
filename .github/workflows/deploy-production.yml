@@ -227,7 +227,7 @@ jobs:
       - name: Invalidate pages
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id ${{ secrets.AWS_ACADEMY_DISTRIBUTION_ID || 'EKGYZKUYRL87E' }} \
+            --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} \
             --paths "/*" \
             --query 'Invalidation.Id' --output text
 
