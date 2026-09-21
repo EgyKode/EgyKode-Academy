@@ -11,7 +11,7 @@ import { SITE } from "@/lib/site";
 import { APP_TITLE_SCRIPT } from "@/lib/app-title-script";
 import { SW_REGISTER_SCRIPT } from "@/lib/sw-register-script";
 import { THEME_SCRIPT } from "@/lib/theme-script";
-import { organization } from "@/lib/structured-data";
+import { organization, parentOrganization, website } from "@/lib/structured-data";
 
 export function generateStaticParams() {
   return PUBLIC_LOCALES.map((locale) => ({ locale }));
@@ -70,24 +70,14 @@ export default async function LocaleLayout({
   const typed = locale as Locale;
   const t = getTranslations(typed);
 
-  // Built from SITE rather than a literal, so a preview deployment describes
-  // itself instead of claiming to be the production site.
+  // Multi-entity graph connecting EgyKode parent company to EgyKode Academy
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "EgyKode",
-    url: SITE.url,
-    description: t("seo.homeDescription"),
-    inLanguage: typed,
-    // The canonical Organization node, not a second thinner copy of it.
-    //
-    // This block used to declare its own publisher with a name, a url and a
-    // logo — and nothing else. `organization()` carries the description and
-    // the `sameAs` profile links, which are the properties a search engine
-    // uses to decide that "EgyKode" is an entity rather than a misspelling of
-    // a better-known word. Google was substituting the query outright, so the
-    // signals that establish the brand are worth emitting everywhere.
-    publisher: organization(),
+    "@graph": [
+      parentOrganization(),
+      organization(),
+      website(typed),
+    ],
   };
 
   return (
@@ -141,16 +131,48 @@ export default async function LocaleLayout({
         />
 
         <footer className="mt-24 border-t">
-          <div className="mx-auto flex max-w-content flex-col gap-3 px-4 py-10 text-sm text-content-muted sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-            <p>
-              {t("footer.builtWith")} {t("footer.license")}
-            </p>
-            <Link
-              href={SITE.repo}
-              className="transition-colors hover:text-content"
-            >
-              {t("footer.contribute")} →
-            </Link>
+          <div className="mx-auto flex max-w-content flex-col gap-4 px-4 py-10 text-sm text-content-muted sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+            <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+              <p>
+                {t("footer.builtWith")} {t("footer.license")}
+              </p>
+              <span className="hidden text-content-subtle sm:inline">•</span>
+              <p className="text-xs text-content-muted">
+                {typed === "ar" ? "إحدى مبادرات منظومة " : "An official ecosystem product of "}
+                <a
+                  href="https://egykode.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-brand hover:underline"
+                >
+                  EgyKode
+                </a>
+              </p>
+            </div>
+            <div className="flex items-center gap-4 text-xs">
+              <a
+                href="https://pilot.egykode.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-content"
+              >
+                Pilot
+              </a>
+              <a
+                href="https://craft.egykode.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-content"
+              >
+                Craft
+              </a>
+              <Link
+                href={SITE.repo}
+                className="transition-colors hover:text-content"
+              >
+                {t("footer.contribute")} →
+              </Link>
+            </div>
           </div>
         </footer>
       </body>

@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   // No `template` here. The locale layout owns it — defining one at both
   // levels applied it twice, producing "EgyKode — … · EgyKode" on the home
   // page, which reads as a broken title in a search result.
-  title: "EgyKode",
+  title: "EgyKode Academy",
   description:
     "Free, open-source Cloud and DevOps learning platform. Structured chapters, hands-on labs with challenge mode, ordered roadmaps, and projects you deploy — Linux, Docker, Kubernetes, Terraform, AWS, CI/CD, GitOps, observability and SRE.",
-  applicationName: "EgyKode",
+  applicationName: "EgyKode Academy",
   // Not a ranking factor, but read by several non-Google engines and by the
   // preview cards that scrape a page before Google ever sees it.
   keywords: [
@@ -50,7 +50,16 @@ export const metadata: Metadata = {
   //
   // If a URL-prefix property is ever wanted: Search Console → Settings →
   // Ownership verification → HTML tag, then add `verification: { google: … }`.
-  twitter: { card: "summary_large_image", title: "EgyKode", creator: "@Waleeddarwesh" },
+  twitter: { card: "summary_large_image", title: "EgyKode Academy", creator: "@Waleeddarwesh" },
+  icons: {
+    icon: [
+      { url: "/brand/academy.jpeg", type: "image/jpeg" },
+      { url: "/brand/academy.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/brand/academy.jpeg",
+  },
 };
 
 export const viewport: Viewport = {

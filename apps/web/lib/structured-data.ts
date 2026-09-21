@@ -32,26 +32,62 @@ const url = (path: string) => `${SITE.url}${path}`;
 const pageUrl = (path: string) =>
   url(/[.#]/.test(path) || path.endsWith("/") ? path : `${path}/`);
 
-/** The publisher, referenced by everything else via `@id`. */
-export function organization() {
+/** The parent corporate entity: EgyKode. */
+export function parentOrganization() {
   return {
     "@type": "Organization",
-    "@id": url("/#organization"),
+    "@id": "https://egykode.com/#organization",
     name: "EgyKode",
+    url: "https://egykode.com/",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://egykode.com/brand/logo.jpeg",
+    },
+    description:
+      "EgyKode is a technology, software, and cloud engineering company building enterprise platforms, cloud architectures, and digital products.",
+    founder: {
+      "@type": "Person",
+      "@id": "https://egykode.com/#founder",
+      name: "Waleed Darwesh",
+      jobTitle: "Founder & Chief Architect",
+      sameAs: [
+        "https://www.linkedin.com/in/waleeddarwesh1/",
+        "https://github.com/Waleeddarwesh",
+      ],
+    },
+    sameAs: [
+      "https://www.linkedin.com/company/egykode",
+      "https://github.com/EgyKode",
+    ],
+  };
+}
+
+/** The educational organization (EgyKode Academy), sub-entity of EgyKode. */
+export function organization() {
+  return {
+    "@type": "EducationalOrganization",
+    "@id": url("/#organization"),
+    name: "EgyKode Academy",
     url: SITE.url,
     logo: {
       "@type": "ImageObject",
       url: url("/icon.svg"),
     },
     description:
-      "Open-source Cloud and DevOps learning platform — structured chapters, hands-on labs, roadmaps and deployable projects.",
-    // Profiles that corroborate the entity. Google treats a coined brand name
-    // as a probable typo until enough independent references agree it exists —
-    // "egykode" was being auto-corrected to a long-established site — and
-    // `sameAs` is the one place markup can assert those references directly.
-    sameAs: [SITE.repo, "https://github.com/EgyKode", "https://www.linkedin.com/in/waleeddarwesh1"].filter(
-      Boolean,
-    ),
+      "Open-source Cloud and DevOps learning initiative by EgyKode — structured chapters, hands-on labs, roadmaps and deployable projects.",
+    parentOrganization: {
+      "@id": "https://egykode.com/#organization",
+    },
+    founder: {
+      "@type": "Person",
+      "@id": "https://egykode.com/#founder",
+      name: "Waleed Darwesh",
+      sameAs: [
+        "https://www.linkedin.com/in/waleeddarwesh1/",
+        "https://github.com/Waleeddarwesh",
+      ],
+    },
+    sameAs: [SITE.repo, "https://github.com/EgyKode"].filter(Boolean),
   };
 }
 
@@ -68,9 +104,19 @@ export function website(locale: string) {
     "@type": "WebSite",
     "@id": url("/#website"),
     url: SITE.url,
-    name: "EgyKode",
+    name: "EgyKode Academy",
     inLanguage: locale,
-    publisher: { "@id": url("/#organization") },
+    publisher: { "@id": "https://egykode.com/#organization" },
+    provider: { "@id": url("/#organization") },
+    author: {
+      "@type": "Person",
+      "@id": "https://egykode.com/#founder",
+      name: "Waleed Darwesh",
+      sameAs: [
+        "https://www.linkedin.com/in/waleeddarwesh1/",
+        "https://github.com/Waleeddarwesh",
+      ],
+    },
   };
 }
 
@@ -102,7 +148,7 @@ export function learningResource(chapter: {
     keywords: chapter.keywords.join(", "),
     isAccessibleForFree: true,
     provider: { "@id": url("/#organization") },
-    publisher: { "@id": url("/#organization") },
+    publisher: { "@id": "https://egykode.com/#organization" },
   };
 }
 
@@ -123,6 +169,7 @@ export function course(roadmap: {
     inLanguage: roadmap.locale,
     isAccessibleForFree: true,
     provider: { "@id": url("/#organization") },
+    publisher: { "@id": "https://egykode.com/#organization" },
     // Required by Google for Course rich results.
     hasCourseInstance: {
       "@type": "CourseInstance",
