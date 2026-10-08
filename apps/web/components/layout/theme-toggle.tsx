@@ -86,7 +86,7 @@ export function ThemeToggle({ labels }: { labels: Record<Pref | "action", string
   }
 
   function cycle() {
-    const next = ORDER[(ORDER.indexOf(pref) + 1) % ORDER.length];
+    const next = ORDER[(ORDER.indexOf(pref) + 1) % ORDER.length] ?? "system";
     choose(next);
   }
 
