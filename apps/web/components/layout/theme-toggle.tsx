@@ -85,37 +85,63 @@ export function ThemeToggle({ labels }: { labels: Record<Pref | "action", string
     }
   }
 
+  function cycle() {
+    const next = ORDER[(ORDER.indexOf(pref) + 1) % ORDER.length];
+    choose(next);
+  }
+
+  const MobileIcon = ICON[pref];
+
   return (
-    <div
-      role="radiogroup"
-      aria-label={labels.action}
-      className="flex h-9 items-center gap-0.5 rounded-md border p-0.5"
-    >
-      {ORDER.map((option) => {
-        const Icon = ICON[option];
-        // Before mount the stored preference is unknown, so nothing is marked
-        // active — picking one would flash the wrong segment on every load.
-        const active = mounted && pref === option;
-        return (
-          <button
-            key={option}
-            type="button"
-            role="radio"
-            aria-checked={active}
-            aria-label={labels[option]}
-            title={labels[option]}
-            onClick={() => choose(option)}
-            className="flex h-8 w-8 items-center justify-center rounded transition-colors"
-            style={
-              active
-                ? { background: "var(--clr-surface-active)", color: ACTIVE_COLOUR[option] }
-                : { color: "var(--clr-text-muted)" }
-            }
-          >
-            <Icon size={15} aria-hidden />
-          </button>
-        );
-      })}
-    </div>
+    <>
+      {/* Mobile mode only: merged into one button cycling through system -> light -> dark */}
+      <button
+        type="button"
+        aria-label={`${labels.action}: ${labels[pref]}`}
+        title={`${labels.action} (${labels[pref]})`}
+        onClick={cycle}
+        className="btn btn-outline h-9 w-9 shrink-0 p-0 sm:hidden"
+        style={
+          mounted
+            ? { background: "var(--clr-surface-active)", color: ACTIVE_COLOUR[pref] }
+            : { color: "var(--clr-text-muted)" }
+        }
+      >
+        <MobileIcon size={16} aria-hidden />
+      </button>
+
+      {/* Desktop / tablet mode: segmented 3-option control */}
+      <div
+        role="radiogroup"
+        aria-label={labels.action}
+        className="hidden h-9 items-center gap-0.5 rounded-md border p-0.5 sm:flex"
+      >
+        {ORDER.map((option) => {
+          const Icon = ICON[option];
+          // Before mount the stored preference is unknown, so nothing is marked
+          // active — picking one would flash the wrong segment on every load.
+          const active = mounted && pref === option;
+          return (
+            <button
+              key={option}
+              type="button"
+              role="radio"
+              aria-checked={active}
+              aria-label={labels[option]}
+              title={labels[option]}
+              onClick={() => choose(option)}
+              className="flex h-8 w-8 items-center justify-center rounded transition-colors"
+              style={
+                active
+                  ? { background: "var(--clr-surface-active)", color: ACTIVE_COLOUR[option] }
+                  : { color: "var(--clr-text-muted)" }
+              }
+            >
+              <Icon size={15} aria-hidden />
+            </button>
+          );
+        })}
+      </div>
+    </>
   );
 }

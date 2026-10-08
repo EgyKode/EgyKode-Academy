@@ -29,10 +29,10 @@ export function TopBar({ locale }: { locale: Locale }) {
 
   return (
     <header className="sticky top-0 z-50 border-b bg-bg/85 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-content items-center gap-6 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 max-w-content items-center gap-3 px-3 sm:gap-6 sm:px-6 lg:px-8">
         <Link
           href={`/${locale}`}
-          className="flex shrink-0 items-center gap-2.5"
+          className="flex shrink-0 items-center gap-2 sm:gap-2.5"
           aria-label={t("nav.home")}
         >
           <Mark className="h-7 w-auto text-brand" />
@@ -51,7 +51,7 @@ export function TopBar({ locale }: { locale: Locale }) {
           <NavLinks items={nav} className="flex items-center gap-1" />
         </nav>
 
-        <div className="ms-auto flex items-center gap-2">
+        <div className="ms-auto flex shrink-0 items-center gap-1.5 sm:gap-2">
           <CommandPalette
             locale={locale}
             labels={{
