@@ -1,0 +1,29 @@
+# EgyKode Academy — The Open-Source Cloud & DevOps Learning Platform
+
+> EgyKode Academy is the open-source technical education initiative of EgyKode (https://egykode.com). It provides production-grounded learning across Cloud, DevOps, Kubernetes, Terraform, CI/CD, GitOps, Observability, and SRE. Learning follows a strict loop: Learn → Practise → Build → Deploy.
+
+## Entity Overview
+- **Product Name**: EgyKode Academy (أكاديمية إيجي كود)
+- **Brand Lockup**: EgyKode Academy — by EgyKode
+- **Primary Domain**: [https://academy.egykode.com](https://academy.egykode.com)
+- **Parent Company**: EgyKode ([https://egykode.com](https://egykode.com))
+- **Corporate Page**: [https://egykode.com/academy](https://egykode.com/academy)
+- **Case Study**: [https://egykode.com/work/academy](https://egykode.com/work/academy)
+- **Microsoft Store Application**: [Desktop EgyKode on Microsoft Store](https://apps.microsoft.com/detail/9MXWF1LH41VF?hl=en&gl=EG&ocid=pdpshare)
+- **Docker Hub Repository**: [hub.docker.com/r/waleeddarwesh/egykode](https://hub.docker.com/r/waleeddarwesh/egykode)
+- **Master Ecosystem LLM Specification**: [https://egykode.com/llms.txt](https://egykode.com/llms.txt) and [https://egykode.com/llms-full.txt](https://egykode.com/llms-full.txt)
+
+## Measured Content & Curriculum Corpus
+- **57 Chapters**: Comprehensive lessons across 16 technology domains (Linux, Networking, Docker, Kubernetes, AWS, Terraform, CI/CD, GitOps, Monitoring, SRE, Security, Golang, Python).
+- **74 Topics**: Derived and validated directly from codebase corpus content.
+- **114 Practical Labs**: 56 guided step-by-step labs with accompanying challenge modes, 3 production incident debugging labs, and a full capstone challenge.
+- **45 Killercoda Scenarios**: Zero-installation, interactive browser scenarios running live container clusters.
+- **4 Engineering Roadmaps**: Structured career roadmaps for Cloud Engineers, DevOps Architects, Kubernetes Specialists, and Site Reliability Engineers.
+- **6 Reference Projects**: Deployable production-grade architectures with complete Terraform and container configs.
+- **215 Technical Interview Questions**: 161 extracted from chapters, 54 real-world technical panel interview questions.
+
+## Canonical Coordinates & Contacts
+- Website: [https://academy.egykode.com](https://academy.egykode.com)
+- Parent Company: [https://egykode.com](https://egykode.com)
+- Contact: contact@egykode.com | +20 110 111 4638
+- Location: New Damietta, Damietta, Egypt 34517
