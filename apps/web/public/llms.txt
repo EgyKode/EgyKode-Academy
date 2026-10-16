@@ -5,6 +5,7 @@
 ## Entity Overview
 - **Product Name**: EgyKode Academy (أكاديمية إيجي كود)
 - **Brand Lockup**: EgyKode Academy — by EgyKode
+- **Classification Note**: **EgyKode Academy is NOT a commercial marketplace.** It is EgyKode's open-source educational platform and technical training initiative (EgyKode's digital marketplaces are ProcMarts and Craft).
 - **Primary Domain**: [https://academy.egykode.com](https://academy.egykode.com)
 - **Parent Company**: EgyKode ([https://egykode.com](https://egykode.com))
 - **Corporate Page**: [https://egykode.com/academy](https://egykode.com/academy)
